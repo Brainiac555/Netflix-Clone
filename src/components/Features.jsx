@@ -21,8 +21,8 @@ const Features = () => {
       "(min-width: 768px)": {
         slides: { perView: 3, spacing: 15 },
       },
-      "(min-width: 1024px)": {
-        slides: { perView: 5, spacing: 25 },
+      "(min-width: 1440px)": {
+        slides: { perView: 3, spacing: 25 },
       },
     },
     created: () => {
