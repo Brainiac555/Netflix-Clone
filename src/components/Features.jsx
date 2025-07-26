@@ -11,15 +11,18 @@ const Features = () => {
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     slides: {
-      perView: 2,
+      perView: 1,
       spacing: 15,
     },
     breakpoints: {
+       "(min-width: 320px)": {
+        slides: { perView: 3, spacing: 15 },
+      },
       "(min-width: 768px)": {
-        slides: { perView: 4, spacing: 15 },
+        slides: { perView: 3, spacing: 15 },
       },
       "(min-width: 1024px)": {
-        slides: { perView: 5, spacing: 20 },
+        slides: { perView: 5, spacing: 25 },
       },
     },
     created: () => {
@@ -37,7 +40,7 @@ const Features = () => {
       if (slider.current) {
         slider.current.next();
       }
-    }, 9000); // every 3s
+    }, 5000); // every 3s
   };
 
   useEffect(() => {
